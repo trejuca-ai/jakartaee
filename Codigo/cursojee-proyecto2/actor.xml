@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<actor id="1">
+    <fechaNacimiento>12/11/2024</fechaNacimiento>
+    <apellido>Trejo</apellido>
+    <peliculas>
+        <pelicula id="1">
+            <titulo>Transformers</titulo>
+            <genero>Accion</genero>
+        </pelicula>
+        <pelicula id="2">
+            <titulo>Codigo Da vinci</titulo>
+            <genero>suspenso</genero>
+        </pelicula>
+    </peliculas>
+    <genero>Masculino</genero>
+</actor>
