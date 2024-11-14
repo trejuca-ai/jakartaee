@@ -8,27 +8,34 @@ import org.modelmapper.ModelMapper;
 import jakarta.ejb.EJB;
 import jakarta.enterprise.inject.Model;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 import mx.org.banxico.jakarta.dto.CustomerDto;
 import mx.org.banxico.jakarta.entity.Customer;
+import mx.org.banxico.jakarta.repository.CustomerRepository;
+import mx.org.banxico.jakarta.repository.CustomerRepositoryImpl;
 import mx.org.banxico.jakarta.repository.Repository;
 
 @Model
+@Transactional
 public class CustomerServiceImpl implements CustomerService {
 
-	@EJB(beanName = "customerRepository")
+	//@EJB(beanName = "customerRepository")
+	@Inject
+	//private CustomerRepository customerRepository;
 	private Repository<Customer> customerRepository;
 	@Inject
 	private ModelMapper modelMapper;
 	
 	@Override
-	public List<Customer> findAll() {
-		
+	public List<Customer> findAll() {	
 		return customerRepository.findAll();
-//		List<CustomerDto> customersDto = customers.stream()
-//				.map(customer -> modelMapper.map(customer, CustomerDto.class))
-//				.collect(Collectors.toList());
-		
-//		return customersDto;
 	}
+
+	@Override
+	public void save(Customer customer) {
+		customerRepository.save(customer);
+	}
+	
+	
 
 }

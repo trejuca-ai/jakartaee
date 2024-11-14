@@ -7,4 +7,5 @@ import mx.org.banxico.jakarta.entity.Customer;
 
 public interface CustomerService {
 	public List<Customer> findAll(); 
+	public void save(Customer customer);
 }
