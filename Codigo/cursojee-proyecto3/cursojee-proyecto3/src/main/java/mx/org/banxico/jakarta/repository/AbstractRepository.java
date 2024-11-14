@@ -2,7 +2,9 @@ package mx.org.banxico.jakarta.repository;
 
 import java.util.List;
 
+import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.PersistenceUnit;
 import jakarta.persistence.Query;
 import jakarta.persistence.criteria.CriteriaQuery;
@@ -11,10 +13,11 @@ import jakarta.persistence.criteria.Root;
 public abstract class AbstractRepository<T> {
 
 	private Class<T> entity;
-	
-	@PersistenceUnit(unitName = "default-pu")
-	private EntityManager em;
 
+	//@PersistenceContext(unitName = "default-pu")
+	@Inject
+	private EntityManager em;
+	
 	public AbstractRepository(Class<T> entity) {
 		this.entity = entity;
 	}

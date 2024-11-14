@@ -14,7 +14,7 @@
 			<property name="eclipselink.logging.level.sql" value="FINE"/>
 			<property name="eclipselink.logging.parameters" value="true"/>
 			<property name="eclipselink.persistence-context.flush-mode" value="commit"/>
-		<!-- 	<property name="eclipselink.target-server" value="mysql"/>
+<!-- 			<property name="eclipselink.target-server" value="mysql"/>
  			<property name="eclipselink.ddl.default-schema" value="sakila"/> -->
 		</properties>
 	</persistence-unit>

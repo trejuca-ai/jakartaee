@@ -20,7 +20,7 @@
     	res-type="javax.sql.DataSource" statement-timeout-in-seconds="-1" 
     	steady-pool-size="8" validate-atmost-once-period-in-seconds="0" 
     	wrap-jdbc-objects="false">
-    	
+    
         <property name="serverName" value="localhost"/>
         <property name="portNumber" value="1433"/>
         <property name="databaseName" value="sakila"/>

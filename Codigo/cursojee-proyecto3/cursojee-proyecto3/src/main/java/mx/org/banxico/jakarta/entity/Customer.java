@@ -11,7 +11,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "dbo.customer")
+@Table(name = "customer")
 @Setter
 @Getter
 @ToString

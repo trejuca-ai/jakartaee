@@ -9,5 +9,5 @@ public class CustomerRepositoryImpl extends AbstractRepository<Customer>
 
 	public CustomerRepositoryImpl() {
 		super(Customer.class);
-	}	
+	}
 }
