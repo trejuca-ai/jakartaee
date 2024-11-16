@@ -4,9 +4,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Properties;
 
-import org.eclipse.jax.completo.security.AuthenticatedUser;
-import org.eclipse.jax.completo.security.Secured;
-
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.Consumes;
@@ -26,6 +23,8 @@ import mx.org.banxico.jakarta.dto.RestExceptionMessageDto;
 import mx.org.banxico.jakarta.entity.Customer;
 import mx.org.banxico.jakarta.entity.Staff;
 import mx.org.banxico.jakarta.exception.ResourceNotFoundException;
+import mx.org.banxico.jakarta.security.AuthenticatedUser;
+import mx.org.banxico.jakarta.security.Secured;
 import mx.org.banxico.jakarta.service.CustomerService;
 
 
